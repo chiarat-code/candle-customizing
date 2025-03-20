@@ -20,17 +20,20 @@
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Customize Your Candle&lt;/title&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; text-align: center; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.candle-preview { margin: 20px auto; width: 150px; height: 200px; border-radius: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.options { margin: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.candle-preview { margin: 20px auto; width: 150px; height: 200px; border-radius: 10px; background-color: #ccc; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options { margin: 10px; }</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
 <p class="p1">&lt;/head&gt;</p>
 <p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Customize Your Candle&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="candle-preview" id="candlePreview"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="options"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Choose Color: &lt;input type="color" id="colorPicker"&gt;&lt;/label&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="options"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Choose Drawing:</p>
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="drawing"&gt;</p>
@@ -42,7 +45,7 @@
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="options"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Choose Scent:</p>
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="scent"&gt;</p>
@@ -54,7 +57,7 @@
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="options"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Choose Shape:</p>
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="shape"&gt;</p>
@@ -66,34 +69,7 @@
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="generateCandle()"&gt;Show My Candle&lt;/button&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="result"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Your Candle:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="candle" class="candle-preview" style="background-color: #ffffff;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="summary"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function generateCandle() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let color = document.getElementById("colorPicker").value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let drawing = document.getElementById("drawing").value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let scent = document.getElementById("scent").value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let shape = document.getElementById("shape").value;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>let candle = document.getElementById("candle");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>candle.style.backgroundColor = color;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>let summary = `A ${shape} candle, with ${scent} scent.`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (drawing !== "none") {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>summary += ` It has a ${drawing} drawing.`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("summary").innerText = summary;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
